@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service Calc { 
+	rpc Add(Ops) returns (Result);
+	rpc Sub(Ops) returns (Result);
+}
+
+
+message Ops {
+	int32 a = 1;
+	int32 b = 2;
+}
+
+message Result { 
+	int32 result = 1;
+}
